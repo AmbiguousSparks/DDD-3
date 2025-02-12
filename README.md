@@ -1,5 +1,5 @@
 # 📚 Trabalho - Design Tático no DDD
-
+d
 ## 📌 Objetivo
 Criar as **Entidades, Value Objects, Agregados e Repositórios** do seu projeto, aplicando o **Design Tático do DDD**.
 
