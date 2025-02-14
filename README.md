@@ -129,7 +129,7 @@ public class Pedido
         Produtos = produtos ?? throw new ArgumentNullException(nameof(produtos));
 
         if (produtos.Count <= 0)
-            throw new ArgumentException("Necessário ter ao menos um produto vinculado ao produto.");
+            throw new ArgumentException("Necessário ter ao menos um produto vinculado ao pedido.");
         if (valorTotal <= 0)
             throw new ArgumentException("Necessário informar o valor total.");
 
@@ -140,6 +140,7 @@ public class Pedido
     public void AdicionarProduto(Produto produto){
         Produtos.Add(produto);
     }
+
     public void RemoverProdutos(Produto produto) {
         Produtos.Remove(produto);
     }
