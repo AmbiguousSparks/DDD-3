@@ -209,15 +209,7 @@ Os **Repositórios** são responsáveis por **persistir e recuperar** agregados.
 ✅ Devem **trabalhar apenas com Aggregate Roots**.  
 ✅ **Não devem expor entidades internas do agregado diretamente**.  
 
-💡 **Exemplo de Interface de Repositório para o Contexto de Consultas:**  
-
-```csharp
-public interface IConsultaRepository
-{
-    Consulta ObterPorId(Guid id);
-    void Salvar(Consulta consulta);
-}
-```
+💡 **Exemplo de Interface de Repositório para o Contexto de Consultas:** 
 
 ```csharp
 public interface IReservaRepository
@@ -244,15 +236,7 @@ Criar as **Entidades, Value Objects, Agregados e Repositórios** do seu projeto.
 3️⃣ **Implemente um diagrama mostrando as relações entre os elementos**.  
 4️⃣ **Crie a interface do repositório para persistência do agregado**.  
 
-📌 **Exemplo de Resposta para Keller’s Health:**  
-
-| **Elemento**            | **Tipo**         | **Explicação** |
-|-------------------------|-----------------|---------------|
-| Paciente               | Entidade        | Possui identidade única e pode mudar ao longo do tempo. |
-| Médico                 | Entidade        | Tem uma identidade única e pode alterar seus horários. |
-| CPF                    | Value Object    | Não muda e sempre pertence a um único paciente. |
-| Endereço               | Value Object    | Se o paciente mudar de endereço, um novo objeto será criado. |
-| Consulta (Agregado)    | Aggregate Root  | Controla a relação entre Paciente, Médico e Data da Consulta. |
+📌 **Exemplo de Resposta para Keller’s Health:** 
 
 
 📌 **Ferramentas para Criar o Diagrama:**  
