@@ -36,7 +36,7 @@ public class Cliente
         if (string.IsNullOrWhiteSpace(nome))
             throw new ArgumentNullException("Necessário preencher o nome.");
 
-        if (dataNascimento != DateTime.MinValue || dataNascimento > DateTime.Now)
+        if (dataNascimento == DateTime.MinValue || dataNascimento > DateTime.Now)
             throw new ArgumentNullException("Data de Nascimento inválido.");
 
         Id = Guid.NewGuid();
